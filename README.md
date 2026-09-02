@@ -114,9 +114,7 @@ it is part of the key derivation.
 
 This encrypts values so that a database dump, a backup, or a replica is not a
 pile of readable credentials. It does not protect against an attacker who can
-read your process memory or your key. Equality search on an encrypted column is
-impossible by design, since the same plaintext encrypts differently every time.
-Index or search on a separate, non-secret column.
+read your process memory or your key.
 
 ## License
 
