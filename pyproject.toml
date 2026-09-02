@@ -44,3 +44,4 @@ known-first-party = ["sqlalchemy_encrypted_field", "tests"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
