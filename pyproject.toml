@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sqlalchemy-encrypted-field"
+version = "1.0.0"
+description = "Authenticated-encryption column types for SQLAlchemy, with key rotation and per-column binding"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "Paulo Alvarado" }]
+keywords = ["sqlalchemy", "encryption", "aes-gcm", "secrets", "column", "at-rest"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Database",
+    "Topic :: Security :: Cryptography",
+    "Typing :: Typed",
+]
+dependencies = ["SQLAlchemy>=2.0", "cryptography>=41"]
+
+[project.urls]
+Homepage = "https://github.com/czpython/sqlalchemy-encrypted-field"
+Issues = "https://github.com/czpython/sqlalchemy-encrypted-field/issues"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sqlalchemy_encrypted_field"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["sqlalchemy_encrypted_field", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
