@@ -11,7 +11,7 @@ from sqlalchemy_encrypted_field import (
 )
 from tests.conftest import key
 
-# An envelope written by version 1.0.0 under the key and AAD below, with the
+# An envelope written by the first release under the key and AAD below, with the
 # default HKDF info. It must stay readable forever: any change to the envelope
 # layout, the derivation, or the default info string breaks this test, which is
 # the point — stored data outlives the code that wrote it.
