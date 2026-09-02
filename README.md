@@ -51,7 +51,7 @@ storing plaintext.
 pip install sqlalchemy-encrypted-field
 ```
 
-Requires Python 3.10+, SQLAlchemy 2.0+.
+Requires Python 3.11+, SQLAlchemy 2.0+. Tested on 3.11 through 3.15.
 
 ## Fields
 
