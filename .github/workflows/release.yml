@@ -1,11 +1,11 @@
-name: Publish
+name: Release
 
 on:
   release:
     types: [published]
 
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
     environment: pypi
     permissions:
