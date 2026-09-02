@@ -6,7 +6,7 @@ only where you ask for it.
 ```python
 from sqlalchemy_encrypted_field import EncryptedTextField, configure
 
-configure(os.environ["APP_SECRETS_KEY"])
+configure(os.environ["SQLALCHEMY_ENCRYPTED_FIELD_KEYS"])
 
 
 class Server(Base):
@@ -51,7 +51,7 @@ storing plaintext.
 pip install sqlalchemy-encrypted-field
 ```
 
-Requires Python 3.11+, SQLAlchemy 2.0+. Tested on 3.11 through 3.15.
+Requires Python 3.11+, SQLAlchemy 2.0+. Tested on 3.11 through 3.14.
 
 ## Fields
 
